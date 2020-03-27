@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Epidemic quarantine sim</title>
+    <meta charset="UTF-8" />
+
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet" />
+</head>
+
+<body>
+<div id="root">
+    <div id="simulation">
+        <div id="graph-container">
+            <svg id="graph" />
+        </div>
+
+        <div id="statistics">
+            <div id="total-cases">
+                <div id="plot-container">
+                    <svg id="plot" />
+                </div>
+            </div>
+
+            <div id="summary"></div>
+
+            <div id="controls">
+                <div class="controls-line">
+                    <label for="quarantined">Quarantined:</label>
+                    <input type="range" id="quarantined" name="quarantined"
+                           min="0" max="1" value="0" step="0.01">
+                    <div id="quarantined-label">0%</div>
+                </div>
+                <div class="controls-line">
+                    <label for="use-random-graph">Use random graph:</label>
+                    <input type="checkbox" id="use-random-graph">
+                </div>
+            </div>
+
+            <div id="buttons">
+                <button class="primary" id="run-simulation-button">
+                    Run again
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="src/index.js"></script>
+</body>
+</html>
