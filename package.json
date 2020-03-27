@@ -1,0 +1,22 @@
+{
+  "name": "epidemic-quarantine-sim",
+  "version": "1.0.0",
+  "description": "Epidemic quarantine sim",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "d3": "5.15.0",
+    "ramda": "^0.27.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "parcel-bundler": "^1.6.1"
+  },
+  "keywords": [
+    "javascript",
+    "starter"
+  ]
+}
