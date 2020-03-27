@@ -32,7 +32,7 @@ let localSimulationParams = {
     ...SIMULATION_PARAMS
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+const initLayout = () => {
     graphWidth = parseInt(d3.select('#graph-container').style('width'), 10);
     graphHeight = parseInt(d3.select('#graph-container').style('height'), 10);
     graphViewWidth = Math.round(graphWidth * 0.95);
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
     initDisplayAndSimulation();
-});
+};
 
 const initDisplayAndSimulation = () => {
     nodes = initGraph(graphSvg, data, graphViewWidth, graphViewHeight, !localSimulationParams.USE_RANDOM_GRAPH).nodes;
@@ -128,3 +128,9 @@ const runSimulation = (nodes) => {
     )
 };
 
+if(document.readyState !== 'loading') {
+    initLayout();
+}
+else {
+    document.addEventListener('DOMContentLoaded', initLayout);
+}
