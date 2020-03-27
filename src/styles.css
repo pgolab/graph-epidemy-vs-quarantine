@@ -1,0 +1,236 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Lato, serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background: #303030;
+}
+
+#root {
+    height: 100%;
+    max-height: 600px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #fff;
+}
+
+#simulation {
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+#statistics {
+    display: flex;
+    flex-direction: column;
+    max-width: 350px;
+
+    padding: 16px 10px;
+
+    background: #f7f7f7;
+}
+
+#graph-container {
+    flex-grow: 1;
+    background: #272727;
+}
+
+#chart-container {
+    max-height: 200px;
+}
+
+#summary {
+    flex-grow: 1;
+    margin-top: 6px;
+}
+
+#buttons {
+    height: 30px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#controls {
+    padding: 12px 6px;
+
+    font-size: 14px;
+}
+
+.controls-line {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.controls-line label {
+    width: 120px;
+}
+
+.controls-line input {
+    margin: 0 6px;
+}
+
+#quarantined-label {
+    width: 40px;
+}
+
+button,
+button:focus,
+button:hover {
+    box-shadow: none;
+    outline: 0;
+
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 200px;
+}
+
+button.primary {
+    background: #deebf1;
+    box-shadow: 1px 1px 2px #afebff;
+}
+
+button.primary:hover {
+    background: #bde9ff;
+}
+
+.healthy {
+    fill: #3DFF4F;
+    background: #3DFF4F;
+}
+
+.sick-latent {
+    fill: #FFF35D;
+    background: #FFF35D;
+}
+
+.sick-active {
+    fill: #FE403C;
+    background: #FE403C;
+}
+
+.deceased {
+    fill: #726762;
+    background: #726762;
+}
+
+.immune {
+    fill: #3D9EFF;
+    background: #3D9EFF;
+}
+
+.quarantined {
+    stroke: #ffffff;
+    stroke-width: 1;
+}
+
+.not-quarantined {
+    stroke: rgba(0, 0, 0, 0.75);
+    stroke-width: 1;
+}
+
+.total-cases {
+    fill: #ffb82d;
+    background: #ffb82d;
+}
+
+.capacity-line {
+    stroke: #A0A0A0;
+    stroke-width: 2px;
+    stroke-dasharray: 10;
+}
+
+.node-group .node-label {
+    fill: #fff;
+    font-size: 10px;
+    opacity: 0.3;
+    transform: translate(10px, 3px);
+}
+
+.node-group:hover .node-label {
+    opacity: 1;
+    font-size: 12px;
+    transform: translate(9px, 4px);
+    paint-order: stroke;
+    stroke: #000;
+    stroke-width: 4px;
+    stroke-linecap: butt;
+    stroke-linejoin: miter;
+}
+
+.previous-plot {
+    opacity: 0.15;
+    fill: #bbb;
+}
+
+.current {
+    opacity: 0.8;
+}
+
+.summary-table {
+    width: 100%;
+
+    background: white;
+    border: none;
+}
+
+.summary-table tr {
+    border: none;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.summary-table .state-col {
+    width: 90px;
+}
+
+.summary-table .count-col,
+.summary-table .percent-col {
+    width: 45px;
+    font-size: 15px;
+}
+
+.summary-table .percent-col {
+    font-style: italic;
+}
+
+.summary-table td {
+    border: none;
+    text-align: center;
+}
+
+.state-cell-content {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 6px;
+    font-size: 12px;
+}
+
+.state-viz {
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+}
